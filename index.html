@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Happy Teachers' Day | Aditya Kumar Singh</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    min-height:100svh;
+    overflow-x:hidden;
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    color:#fff;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(255,190,70,.16),transparent 28%),
+        radial-gradient(circle at 85% 25%,rgba(103,82,255,.18),transparent 30%),
+        radial-gradient(circle at 50% 100%,rgba(255,74,153,.13),transparent 35%),
+        #070811;
+}
+
+/* BACKGROUND */
+
+.bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-10;
+}
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:.55;
+    animation:float 9s ease-in-out infinite alternate;
+}
+
+.glow1{
+    width:350px;
+    height:350px;
+    background:rgba(255,181,63,.17);
+    left:-100px;
+    top:5%;
+}
+
+.glow2{
+    width:400px;
+    height:400px;
+    background:rgba(101,80,255,.15);
+    right:-150px;
+    top:35%;
+    animation-delay:-3s;
+}
+
+.glow3{
+    width:300px;
+    height:300px;
+    background:rgba(255,72,145,.12);
+    left:45%;
+    bottom:-150px;
+    animation-delay:-6s;
+}
+
+@keyframes float{
+    to{
+        transform:translate(25px,-25px) scale(1.12);
+    }
+}
+
+.stars{
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(circle,rgba(255,255,255,.75) 1px,transparent 1px),
+        radial-gradient(circle,rgba(255,255,255,.35) 1px,transparent 1px);
+    background-size:90px 90px,150px 150px;
+    opacity:.25;
+    animation:starMove 25s linear infinite;
+}
+
+@keyframes starMove{
+    to{
+        transform:translateY(-90px);
+    }
+}
+
+/* HEADER */
+
+.header{
+    width:min(1200px,calc(100% - 34px));
+    margin:18px auto 0;
+    min-height:60px;
+    padding:10px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:20px;
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.3),
+        inset 0 1px rgba(255,255,255,.08);
+    position:relative;
+    z-index:50;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logoIcon{
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    color:#15110b;
+    background:linear-gradient(135deg,#ffe9a8,#ffb33f);
+    box-shadow:0 8px 28px rgba(255,181,60,.25);
+}
+
+.date{
+    font-size:11px;
+    color:rgba(255,255,255,.65);
+    padding:8px 13px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:999px;
+}
+
+/* MAIN */
+
+main{
+    width:100%;
+    min-height:calc(100vh - 95px);
+    min-height:calc(100svh - 95px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:35px 20px 45px;
+}
+
+.wrapper{
+    width:min(1150px,100%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    animation:titleIn 1s ease both;
+}
+
+.eyebrow{
+    color:#ffd477;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.title h1{
+    font-size:clamp(30px,4.5vw,58px);
+    line-height:1;
+    font-weight:850;
+    background:linear-gradient(135deg,#fff,#ffe0a0,#ffb55b);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.title p{
+    margin-top:11px;
+    color:rgba(255,255,255,.56);
+    font-size:13px;
+}
+
+@keyframes titleIn{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* STAGE */
+
+.stage{
+    width:min(1000px,100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective:1800px;
+    padding:20px;
+}
+
+/* CARD */
+
+.card{
+    position:relative;
+    width:min(720px,78vw);
+    height:min(445px,48vw);
+    min-height:390px;
+    transform-style:preserve-3d;
+    transition:transform .25s ease;
+    animation:cardIn 1.2s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(50px) rotateX(12deg) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) rotateX(0) scale(1);
+    }
+}
+
+/* ENVELOPE */
+
+.envelope{
+    position:absolute;
+    inset:0;
+    border-radius:26px;
+    background:linear-gradient(145deg,#303454,#15182d 65%,#0e1020);
+    border:1px solid rgba(255,255,255,.14);
+    box-shadow:
+        0 45px 90px rgba(0,0,0,.48),
+        0 20px 40px rgba(0,0,0,.3);
+    transform-style:preserve-3d;
+}
+
+/* FRONT */
+
+.front{
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    overflow:hidden;
+    z-index:5;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.015)
+    );
+}
+
+.front:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            135deg,
+            transparent 48.8%,
+            rgba(255,255,255,.06) 49.5%,
+            transparent 51%
+        );
+}
+
+.front:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:58%;
+    background:
+        linear-gradient(
+            145deg,
+            transparent 49%,
+            rgba(255,255,255,.055) 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            215deg,
+            transparent 49%,
+            rgba(255,255,255,.045) 50%,
+            transparent 51%
+        );
+}
+
+/* FLAP */
+
+.flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:60%;
+    z-index:10;
+    transform-origin:top center;
+    transform-style:preserve-3d;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    background:linear-gradient(145deg,#4a4e78,#252946 70%,#171a31);
+    border-radius:26px 26px 0 0;
+    transition:
+        transform 1.4s cubic-bezier(.65,-.05,.2,1),
+        filter .5s ease;
+    backface-visibility:hidden;
+}
+
+.flap:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    clip-path:inherit;
+    background:linear-gradient(135deg,rgba(255,255,255,.14),transparent 45%);
+}
+
+/* LETTER */
+
+.letter{
+    position:absolute;
+    left:50%;
+    bottom:18px;
+    width:88%;
+    height:82%;
+    transform:translateX(-50%);
+    background:linear-gradient(145deg,#fffdf7,#f3ecdf);
+    color:#26232a;
+    border-radius:18px;
+    padding:38px 44px;
+    opacity:0;
+    z-index:2;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.32);
+    transition:
+        transform 1.2s cubic-bezier(.2,.85,.2,1) .45s,
+        opacity .55s ease .4s;
+}
+
+.letter:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 90% 10%,rgba(255,193,85,.18),transparent 28%);
+    pointer-events:none;
+}
+
+.letterContent{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+/* MESSAGE ANIMATION */
+
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+}
+
+.card.open .reveal{
+    animation:reveal .8s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.card.open .label{
+    animation-delay:.75s;
+}
+
+.card.open .mainHeading{
+    animation-delay:1s;
+}
+
+.card.open .teacher{
+    animation-delay:1.25s;
+}
+
+.card.open .message{
+    animation-delay:1.5s;
+}
+
+.card.open .signature{
+    animation-delay:2.1s;
+}
+
+@keyframes reveal{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.label{
+    font-size:10px;
+    color:#a37a2c;
+    letter-spacing:2.5px;
+    font-weight:850;
+    text-transform:uppercase;
+}
+
+.mainHeading{
+    margin-top:9px;
+    font-size:clamp(28px,0vw,47px);
+    line-height:.98;
+    background:linear-gradient(135deg,#332515,#a06c20);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.teacher{
+    margin-top:10px;
+    font-size:17px;
+    font-weight:800;
+    color:#57442a;
+}
+
+.message{
+    margin-top:18px;
+    max-width:620px;
+    font-size:14px;
+    line-height:1.7;
+    color:#5b574f;
+}
+
+.signature{
+    margin-top:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:4px;
+}
+
+.signature small{
+    font-size:10px;
+    color:#8d867b;
+}
+
+.signature strong{
+    font-size:19px;
+    color:#302416;
+}
+
+/* HEART */
+
+.heart{
+    position:absolute;
+    top:25px;
+    right:28px;
+    font-size:25px;
+    color:#b77b30;
+    opacity:0;
+}
+
+.card.open .heart{
+    animation:
+        heartIn .7s ease 1.9s forwards,
+        heartbeat 1.5s ease-in-out 2.6s infinite;
+}
+
+@keyframes heartIn{
+    from{
+        opacity:0;
+        transform:scale(.3) rotate(-30deg);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0);
+    }
+}
+
+@keyframes heartbeat{
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+/* SEAL */
+
+.seal{
+    position:absolute;
+    left:50%;
+    top:52%;
+    width:78px;
+    height:78px;
+    transform:translate(-50%,-50%);
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    z-index:20;
+    background:radial-gradient(circle at 35% 25%,#ffe9aa,#d99b35 65%,#955e13);
+    border:4px solid rgba(255,255,255,.25);
+    box-shadow:
+        0 0 0 9px rgba(255,190,70,.08),
+        0 15px 30px rgba(0,0,0,.4);
+    transition:
+        transform .55s ease,
+        opacity .4s ease;
+}
+
+.seal span{
+    font-size:29px;
+}
+
+.card.open .seal{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.2) rotate(120deg);
+}
+
+/* OPEN */
+
+.card.open .flap{
+    transform:rotateX(178deg);
+    z-index:1;
+    filter:brightness(.78);
+}
+
+.card.open .letter{
+    opacity:1;
+    transform:translateX(-50%) translateY(-82px);
+    z-index:8;
+}
+
+/* CONTROLS */
+
+.controls{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+button{
+    min-height:46px;
+    padding:0 24px;
+    border-radius:999px;
+    border:0;
+    cursor:pointer;
+    font-weight:800;
+    font-size:13px;
+    transition:.2s ease;
+}
+
+.openBtn{
+    color:#171109;
+    background:linear-gradient(135deg,#ffe5a0,#ffb64e);
+    box-shadow:0 12px 32px rgba(255,181,69,.25);
+}
+
+.replayBtn{
+    display:none;
+    color:white;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.card.open ~ .controls .openBtn{
+    display:none;
+}
+
+.card.open ~ .controls .replayBtn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hint{
+    color:rgba(255,255,255,.38);
+    font-size:10px;
+}
+
+/* CONFETTI */
+
+.confettiBox{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:100;
+}
+
+.confetti{
+    position:absolute;
+    top:-20px;
+    width:7px;
+    height:13px;
+    animation:fall var(--time) linear forwards;
+}
+
+@keyframes fall{
+    from{
+        opacity:1;
+        transform:translateY(-30px) rotate(0);
+    }
+    to{
+        opacity:0;
+        transform:translate3d(var(--move),110vh,0) rotate(720deg);
+    }
+}
+
+/* TABLET */
+
+@media(max-width:850px){
+
+    .card{
+        width:min(650px,90vw);
+        height:420px;
+    }
+
+    .letter{
+        padding:32px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .header{
+        width:calc(100% - 18px);
+        margin-top:9px;
+        min-height:51px;
+        padding:8px 11px;
+        border-radius:16px;
+    }
+
+    .logo{
+        font-size:9px;
+    }
+
+    .logoIcon{
+        width:30px;
+        height:30px;
+    }
+
+    .date{
+        font-size:8px;
+        padding:7px 9px;
+    }
+
+    main{
+        min-height:calc(100svh - 70px);
+        padding:22px 10px 28px;
+    }
+
+    .wrapper{
+        gap:14px;
+    }
+
+    .eyebrow{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .title h1{
+        font-size:clamp(24px,8vw,34px);
+    }
+
+    .title p{
+        font-size:9px;
+        margin-top:7px;
+    }
+
+    .stage{
+        padding:5px 0 10px;
+    }
+
+    /* PORTRAIT MOBILE CARD */
+
+    .card{
+        width:min(92vw,390px);
+        height:min(122vw,510px);
+        min-height:0;
+    }
+
+    .envelope{
+        border-radius:21px;
+    }
+
+    .flap{
+        height:53%;
+        border-radius:21px 21px 0 0;
+    }
+
+    .letter{
+        width:86%;
+        height:76%;
+        padding:27px 22px;
+        border-radius:15px;
+        bottom:16px;
+    }
+
+    .card.open .letter{
+        transform:translateX(-50%) translateY(-48px);
+    }
+
+    .label{
+        font-size:8px;
+        letter-spacing:1.5px;
+    }
+
+    .mainHeading{
+        font-size:clamp(25px,8vw,34px);
+    }
+
+    .teacher{
+        font-size:13px;
+        margin-top:8px;
+    }
+
+    .message{
+        font-size:11px;
+        line-height:1.6;
+        margin-top:13px;
+    }
+
+    .signature strong{
+        font-size:15px;
+    }
+
+    .signature small{
+        font-size:8px;
+    }
+
+    .heart{
+        top:17px;
+        right:18px;
+        font-size:19px;
+    }
+
+    .seal{
+        width:62px;
+        height:62px;
+    }
+
+    .seal span{
+        font-size:23px;
+    }
+
+    button{
+        min-height:42px;
+        padding:0 19px;
+        font-size:11px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:390px){
+
+    .card{
+        width:94vw;
+        height:min(126vw,475px);
+    }
+
+    .letter{
+        padding:23px 19px;
+    }
+
+    .mainHeading{
+        font-size:25px;
+    }
+
+    .teacher{
+        font-size:11px;
+    }
+
+    .message{
+        font-size:10px;
+        line-height:1.55;
+    }
+
+    .signature strong{
+        font-size:13px;
+    }
+
+    .card.open .letter{
+        transform:translateX(-50%) translateY(-38px);
+    }
+}
+
+/* VERY SMALL */
+
+@media(max-width:350px){
+
+    .title h1{
+        font-size:22px;
+    }
+
+    .card{
+        width:94vw;
+        height:min(116vw,420px);
+    }
+
+    .letter{
+        padding:20px 17px;
+    }
+
+    .mainHeading{
+        font-size:22px;
+    }
+
+    .teacher{
+        font-size:10px;
+    }
+
+    .message{
+        font-size:9px;
+        line-height:1.5;
+        margin-top:9px;
+    }
+
+    .signature strong{
+        font-size:12px;
+    }
+
+    .card.open .letter{
+        transform:translateX(-50%) translateY(-34px);
+    }
+}
+
+/* SHORT SCREEN */
+
+@media(max-height:700px) and (max-width:600px){
+
+    main{
+        padding-top:12px;
+    }
+
+    .title{
+        transform:scale(.9);
+    }
+
+    .card{
+        height:min(110vw,400px);
+    }
+
+    .letter{
+        padding:20px;
+    }
+
+    .message{
+        margin-top:8px;
+        line-height:1.48;
+    }
+
+    .hint{
+        display:none;
+    }
+}
+
+/* LANDSCAPE MOBILE */
+
+@media(max-height:500px) and (orientation:landscape){
+
+    .header{
+        margin-top:6px;
+    }
+
+    main{
+        padding:15px;
+    }
+
+    .title{
+        display:none;
+    }
+
+    .card{
+        width:min(75vw,650px);
+        height:min(47vw,370px);
+    }
+
+    .letter{
+        padding:23px 28px;
+    }
+
+    .message{
+        font-size:11px;
+        margin-top:9px;
+    }
+
+    .hint{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div class="bg">
+    <div class="stars"></div>
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+    <div class="glow glow3"></div>
+</div>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logoIcon">✦</div>
+        <span>TEACHERS' DAY • 2026</span>
+    </div>
+
+    <div class="date">
+        05 SEPTEMBER
+    </div>
+
+</header>
+
+<!-- MAIN -->
+
+<main>
+
+<section class="wrapper">
+
+    <div class="title">
+
+        <div class="eyebrow">
+            A Little Note of Gratitude
+        </div>
+
+        <h1>
+            For Someone Who Inspires
+        </h1>
+
+        <p>
+            A special message from a grateful student
+        </p>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="stage">
+
+        <div class="card" id="card">
+
+            <div class="envelope">
+
+                <!-- LETTER -->
+
+                <div class="letter">
+
+                    <div class="letterContent">
+
+                        <div class="label reveal">
+                            With Respect & Gratitude
+                        </div>
+
+                        <h2 class="mainHeading reveal">
+                            Happy<br>
+                            Teachers' Day
+                        </h2>
+
+                        <div class="teacher reveal">
+                            Dr. Your Teacher Name
+                        </div>
+
+                        <p class="message reveal">
+                            Thank you for being more than just a teacher.
+                            Your guidance, patience and encouragement have
+                            helped me learn, grow and believe in myself.
+                            The lessons you teach go far beyond the classroom
+                            and will always remain valuable.
+                            <br><br>
+                            Wishing you a very Happy Teachers' Day.
+                            Thank you for inspiring us to become better
+                            every single day.
+                        </p>
+
+                        <div class="signature reveal">
+
+                            <small>
+                                With sincere gratitude,
+                            </small>
+
+                            <strong>
+                                Aditya Kumar Singh
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="heart">
+                        ♡
+                    </div>
+
+                </div>
+
+                <!-- FRONT -->
+
+                <div class="front"></div>
+
+                <!-- FLAP -->
+
+                <div class="flap"></div>
+
+                <!-- SEAL -->
+
+                <div class="seal">
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="controls">
+
+        <button
+            class="openBtn"
+            id="openBtn">
+            Open Your Card
+        </button>
+
+        <button
+            class="replayBtn"
+            id="replayBtn">
+            ↻ Replay
+        </button>
+
+    </div>
+
+    <div class="hint">
+        Tap to open • Move your mouse for a 3D effect
+    </div>
+
+</section>
+
+</main>
+
+<!-- CONFETTI -->
+
+<div
+    class="confettiBox"
+    id="confettiBox">
+</div>
+
+
+<script>
+
+/* =========================================================
+   SETTINGS
+========================================================= */
+
+const TEACHER_NAME = "Dr. Your Teacher Name";
+const STUDENT_NAME = "Aditya Kumar Singh";
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const card = document.getElementById("card");
+const openBtn = document.getElementById("openBtn");
+const replayBtn = document.getElementById("replayBtn");
+const confettiBox = document.getElementById("confettiBox");
+
+/* =========================================================
+   INSERT NAMES
+========================================================= */
+
+document.querySelector(".teacher").textContent = TEACHER_NAME;
+document.querySelector(".signature strong").textContent = STUDENT_NAME;
+
+/* =========================================================
+   OPEN CARD
+========================================================= */
+
+function openCard(){
+
+    if(card.classList.contains("open")){
+        return;
+    }
+
+    card.classList.add("open");
+
+    setTimeout(() => {
+        createConfetti();
+    }, 1000);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+function resetCard(){
+
+    card.classList.remove("open");
+
+    confettiBox.innerHTML = "";
+
+    card.style.transform = "";
+
+    /* Restart reveal animations */
+
+    document.querySelectorAll(".reveal").forEach(el => {
+
+        el.style.animation = "none";
+
+        void el.offsetWidth;
+
+        el.style.animation = "";
+
+    });
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+openBtn.addEventListener("click",openCard);
+
+replayBtn.addEventListener("click",() => {
+
+    resetCard();
+
+    setTimeout(() => {
+        openCard();
+    },500);
+
+});
+
+/* =========================================================
+   CLICK CARD
+========================================================= */
+
+card.addEventListener("click",(e) => {
+
+    if(
+        !card.classList.contains("open") &&
+        e.target.closest(".envelope")
+    ){
+        openCard();
+    }
+
+});
+
+/* =========================================================
+   DESKTOP 3D TILT
+========================================================= */
+
+if(window.matchMedia("(hover:hover)").matches){
+
+    card.addEventListener("mousemove",(e) => {
+
+        if(card.classList.contains("open")){
+            return;
+        }
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const rotateY =
+            ((x / rect.width) - .5) * 9;
+
+        const rotateX =
+            ((y / rect.height) - .5) * -7;
+
+        card.style.transform = `
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            translateY(-4px)
+        `;
+
+    });
+
+    card.addEventListener("mouseleave",() => {
+
+        if(!card.classList.contains("open")){
+            card.style.transform =
+                "rotateX(0deg) rotateY(0deg)";
+        }
+
+    });
+}
+
+/* =========================================================
+   TOUCH TILT
+========================================================= */
+
+let startX = 0;
+let startY = 0;
+
+card.addEventListener("touchstart",(e) => {
+
+    if(card.classList.contains("open")){
+        return;
+    }
+
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+
+},{passive:true});
+
+card.addEventListener("touchmove",(e) => {
+
+    if(card.classList.contains("open")){
+        return;
+    }
+
+    const dx =
+        e.touches[0].clientX - startX;
+
+    const dy =
+        e.touches[0].clientY - startY;
+
+    const rotateY =
+        Math.max(-5,Math.min(5,dx / 20));
+
+    const rotateX =
+        Math.max(-5,Math.min(5,-dy / 20));
+
+    card.style.transform = `
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+    `;
+
+},{passive:true});
+
+card.addEventListener("touchend",() => {
+
+    if(!card.classList.contains("open")){
+        card.style.transform = "";
+    }
+
+},{passive:true});
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+function createConfetti(){
+
+    confettiBox.innerHTML = "";
+
+    const count =
+        window.innerWidth < 500 ? 65 : 120;
+
+    for(let i = 0;i < count;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.className = "confetti";
+
+        const size =
+            Math.random() * 6 + 4;
+
+        const move =
+            (Math.random() - .5) * 55 + "vw";
+
+        const time =
+            Math.random() * 2.5 + 2.8;
+
+        piece.style.left =
+            Math.random() * 100 + "%";
+
+        piece.style.width =
+            size + "px";
+
+        piece.style.height =
+            size * 1.5 + "px";
+
+        piece.style.background =
+            `hsl(${Math.random()*360},85%,65%)`;
+
+        piece.style.setProperty(
+            "--move",
+            move
+        );
+
+        piece.style.setProperty(
+            "--time",
+            time + "s"
+        );
+
+        piece.style.animationDelay =
+            Math.random() * .8 + "s";
+
+        confettiBox.appendChild(piece);
+    }
+
+    setTimeout(() => {
+        confettiBox.innerHTML = "";
+    },7000);
+}
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener("keydown",(e) => {
+
+    if(
+        (e.key === "Enter" || e.key === " ") &&
+        !card.classList.contains("open")
+    ){
+        e.preventDefault();
+        openCard();
+    }
+
+    if(e.key.toLowerCase() === "r"){
+        resetCard();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
